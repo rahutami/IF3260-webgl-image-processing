@@ -70,6 +70,14 @@ function createProgram(gl, vertexShader, fragmentShader) {
   gl.deleteProgram(program);
 }
 
+function main() {
+  const image = new Image();
+  image.src = "http://127.0.0.1:5500/picture.jpeg"; // MUST BE SAME DOMAIN!!!
+  image.onload = function () {
+    render(image);
+  };
+}
+
 function render(image) {
   const canvas = document.querySelector("#canvas");
   const gl = canvas.getContext("webgl");
