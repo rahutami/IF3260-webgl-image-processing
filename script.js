@@ -194,7 +194,7 @@ function render(image) {
 
   // Draw the rectangle.
   const primitiveType = gl.TRIANGLES;
-  const offset = 0;
+  offset = 0;
   const count = 6;
   gl.drawArrays(primitiveType, offset, count);
 }
